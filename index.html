@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alihuseynovich</title>
-    <!-- Montserrat şrifti -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;900&display=swap" rel="stylesheet">
     
     <style>
@@ -104,7 +103,7 @@
         }
 
         /* Konteynerlərin ümumi animasiya keçid tənzimləmələri */
-        .menu-container, .social-container, .whatsapp-container {
+        .menu-container, .social-container {
             display: flex;
             flex-direction: column;
             gap: 8px;
@@ -121,7 +120,7 @@
 
         /* Uzunsov şüşə xanalar */
         .mini-box {
-            width: 100%;           
+            width: 100%;            
             height: 36px;          
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(20px);
@@ -192,96 +191,6 @@
             transform: translateY(-3px) scale(1.08); 
         }
 
-        /* WHATSAPP BÖLMƏSİ */
-        .whatsapp-container {
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            padding-top: 5px;
-        }
-
-        .whatsapp-title {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 600;
-            font-size: 13px;
-            color: #1a2a4a;
-            line-height: 1.2;
-        }
-
-        .whatsapp-subtitle {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 400;
-            font-size: 10px;
-            color: #4a5568;
-            opacity: 0.8;
-            margin-bottom: 5px;
-        }
-
-        /* Yan-yana düzülüş üçün Wrapper */
-        .input-wrapper {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            width: 100%;
-        }
-
-        /* Telefon nömrəsi xanası (Sol tərəfdə) */
-        .phone-input {
-            flex-grow: 1; 
-            height: 38px;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            border-radius: 10px;
-            outline: none;
-            text-align: center;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 500;
-            font-size: 13px;
-            color: #1a2a4a;
-            letter-spacing: 0.5px;
-            transition: all 0.3s ease;
-        }
-
-        .phone-input:focus {
-            background: rgba(255, 255, 255, 0.12);
-            border-color: rgba(255, 255, 255, 0.6);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-        }
-
-        /* Sağ tərəfdəki Göndər düyməsi */
-        .submit-btn {
-            width: 38px;
-            height: 38px;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            border-radius: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            outline: none;
-            flex-shrink: 0; 
-        }
-
-        .submit-btn img {
-            width: 18px;
-            height: 18px;
-            object-fit: contain;
-            filter: invert(13%) sepia(21%) saturate(3019%) hue-rotate(198deg) brightness(93%) contrast(97%);
-            transition: all 0.3s ease;
-        }
-
-        .submit-btn:hover {
-            background: rgba(255, 255, 255, 0.15);
-            border-color: rgba(255, 255, 255, 0.6);
-            transform: scale(1.08);
-        }
-
         /* GERİ QAYITMAQ (HOME) DÜYMƏSİ */
         .back-button {
             display: flex;
@@ -326,13 +235,11 @@
 <body>
 
     <div class="box">
-        <!-- Başlıq hissəsi -->
         <div class="brand-header">
             <span class="brand-text">Alihuseynovich</span>
             <img src="https://img.icons8.com/?size=100&id=2yC9SZKcXDdX&format=png&color=000000" alt="icon" class="brand-icon">
         </div>
 
-        <!-- Profil Bölməsi -->
         <div class="profile-section">
             <img src="image.jpg" alt="Profil şəkli" class="profile-img">
             
@@ -342,21 +249,18 @@
             </div>
         </div>
 
-        <!-- 1. Ana Menyudakı Uzunsov Şüşə Xanalar -->
         <div class="menu-container" id="mainMenu">
             <div class="mini-box" onclick="showSection('socialMenu')">
                 <span>social profile</span>
             </div>
-            <!-- "old version" düyməsi birbaşa old.html faylına yönləndirir -->
             <div class="mini-box" onclick="location.href='old.html'">
                 <span>old version</span>
             </div>
-            <div class="mini-box" onclick="showSection('whatsappMenu')">
-                <span>whatsapp number</span>
+            <div class="mini-box" onclick="window.open('https://alihuseynovich.github.io/giftframeaz/', '_blank')">
+                <span>my shop</span>
             </div>
         </div>
 
-        <!-- 2. Gizli Sosial Şəbəkə İkonları Paneli -->
         <div class="social-container hidden" id="socialMenu">
             <div class="social-icons-row">
                 <a href="https://www.facebook.com/alihuseynovich" target="_blank" class="social-link">
@@ -381,35 +285,12 @@
             </div>
         </div>
 
-        <!-- 3. Gizli WhatsApp Daxiletmə Paneli -->
-        <div class="whatsapp-container hidden" id="whatsappMenu">
-            <span class="whatsapp-title">Nömrənizi qeyd edin:</span>
-            <span class="whatsapp-subtitle">(Geri dönüş olacaq)</span>
-            
-            <div class="input-wrapper">
-                <!-- Telefon nömrəsi xanası (Sol tərəfdə) -->
-                <input type="text" class="phone-input" id="phoneInput" placeholder="+994(xx) xxx xx xx" maxlength="19">
-                
-                <!-- Göndər düyməsi (Sağ tərəfdə) -->
-                <button type="button" class="submit-btn" onclick="sendPhoneNumber()">
-                    <img src="https://img.icons8.com/?size=100&id=IISmtYu065Oa&format=png&color=000000" alt="Göndər">
-                </button>
-            </div>
-
-            <div class="back-button" onclick="showMainMenu()">
-                <img src="https://img.icons8.com/?size=100&id=DAo1YDH48w1q&format=png&color=000000" alt="Geri Dön">
-            </div>
-        </div>
-
-        <!-- Ən altdakı imza yazısı -->
         <div class="footer-signature">©2025-2026</div>
     </div>
 
     <script>
         const mainMenu = document.getElementById('mainMenu');
         const socialMenu = document.getElementById('socialMenu');
-        const whatsappMenu = document.getElementById('whatsappMenu');
-        const phoneInput = document.getElementById('phoneInput');
 
         // Bölmələri açan funksiya
         function showSection(sectionId) {
@@ -425,22 +306,17 @@
                 setTimeout(() => {
                     targetSection.style.opacity = '1';
                     targetSection.style.transform = 'scale(1)';
-                    if(sectionId === 'whatsappMenu') {
-                        phoneInput.focus();
-                    }
                 }, 50);
             }, 300);
         }
 
         // Əsas menyuya qayıdan funksiya
         function showMainMenu() {
-            const activeSection = !socialMenu.classList.contains('hidden') ? socialMenu : whatsappMenu;
-            
-            activeSection.style.opacity = '0';
-            activeSection.style.transform = 'scale(0.9)';
+            socialMenu.style.opacity = '0';
+            socialMenu.style.transform = 'scale(0.9)';
             
             setTimeout(() => {
-                activeSection.classList.add('hidden');
+                socialMenu.classList.add('hidden');
                 mainMenu.classList.remove('hidden');
                 
                 setTimeout(() => {
@@ -449,120 +325,6 @@
                 }, 50);
             }, 300);
         }
-
-        // Formspree API vasitəsilə e-mailə mesaj göndərmə funksiyası
-        function sendPhoneNumber() {
-            const phoneVal = phoneInput.value;
-
-            // Nömrənin tam doldurulub-doldurulmadığı yoxlanılır
-            if (!phoneVal || phoneVal === '+994(xx) xxx xx xx' || phoneVal.includes('x')) {
-                alert('Zəhmət olmasa nömrənizi tam və doğru şəkildə qeyd edin!');
-                return;
-            }
-
-            const submitBtn = document.querySelector('.submit-btn');
-            submitBtn.style.opacity = '0.5';
-            submitBtn.style.pointerEvents = 'none'; 
-
-            // Formspree API-ə POST sorğusu
-            fetch('https://formspree.io/f/xrervylw', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
-                body: JSON.stringify({
-                    "WhatsApp Nömrəsi": phoneVal
-                })
-            })
-            .then(response => {
-                if (response.ok) {
-                    alert('Təşəkkür edirik! Nömrəniz uğurla göndərildi.');
-                    phoneInput.value = ''; 
-                    showMainMenu(); 
-                } else {
-                    alert('Gözlənilməz xəta baş verdi. Zəhmət olmasa yenidən cəhd edin.');
-                }
-            })
-            .catch(error => {
-                alert('Şəbəkə bağlantısı zamanı xəta yarandı. İnternet xəttinizi yoxlayın.');
-            })
-            .finally(() => {
-                submitBtn.style.opacity = '1';
-                submitBtn.style.pointerEvents = 'auto';
-            });
-        }
-
-        // Dinamik Müştəri Nömrə Maskası ( +994(xx) xxx xx xx )
-        phoneInput.addEventListener('input', function (e) {
-            let inputVal = e.target.value.replace(/\D/g, ''); 
-            
-            if (inputVal.length === 0) {
-                e.target.value = '';
-                return;
-            }
-
-            if (!inputVal.startsWith('994')) {
-                inputVal = '994' + inputVal;
-            }
-
-            inputVal = inputVal.substring(0, 12);
-
-            let numbers = inputVal.substring(3); 
-            let formatted = "+994(";
-            
-            for (let i = 0; i < 2; i++) {
-                if (numbers[i] !== undefined) {
-                    formatted += numbers[i];
-                } else {
-                    formatted += 'x';
-                }
-            }
-            formatted += ") ";
-
-            for (let i = 2; i < 5; i++) {
-                if (numbers[i] !== undefined) {
-                    formatted += numbers[i];
-                } else {
-                    formatted += 'x';
-                }
-            }
-            formatted += " ";
-
-            for (let i = 5; i < 7; i++) {
-                if (numbers[i] !== undefined) {
-                    formatted += numbers[i];
-                } else {
-                    formatted += 'x';
-                }
-            }
-            formatted += " ";
-
-            for (let i = 7; i < 9; i++) {
-                if (numbers[i] !== undefined) {
-                    formatted += numbers[i];
-                } else {
-                    formatted += 'x';
-                }
-            }
-
-            e.target.value = formatted;
-        });
-
-        phoneInput.addEventListener('focus', function (e) {
-            if (e.target.value === '') {
-                e.target.value = '+994(xx) xxx xx xx';
-                setTimeout(() => {
-                    e.target.setSelectionRange(5, 5);
-                }, 10);
-            }
-        });
-
-        phoneInput.addEventListener('blur', function (e) {
-            if (e.target.value === '+994(xx) xxx xx xx') {
-                e.target.value = '';
-            }
-        });
     </script>
 
 </body>
